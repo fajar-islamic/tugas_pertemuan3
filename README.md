@@ -1,17 +1,21 @@
-# tugas_pertemuan2
+# Tugas Pertemuan 3 - Pemrograman Mobile (Flutter)
 
-A new Flutter project.
+Aplikasi Profil Sederhana menggunakan Flutter dan Material Design 3. Project ini dibangun secara bertahap melalui 6 tahapan commit terstruktur untuk mendemonstrasikan alur pengembangan aplikasi profesional.
 
-## Getting Started
+## 🚀 Fitur & Komponen UI
+- **StatelessWidget & Modular Architecture**: Pemisahan logika UI ke dalam folder `lib/pages/home_page.dart`.
+- **Material 3 Design**: Penggunaan `ColorScheme` dan kustomisasi `AppBar`.
+- **Profile Card**: Menampilkan `CircleAvatar`, nama, status, dan indikator statistik ringkas.
+- **Interaktivitas**: `ElevatedButton` dengan aksi `SnackBar`.
 
-This project is a starting point for a Flutter application.
+## 📌 Riwayat Commit (Development Roadmap)
+1. **Sesi 1**: Setup project awal dan testing Hello World di emulator.
+2. **Sesi 2**: Refactoring kode bawaan jadi `StatelessWidget` dan custom UI.
+3. **Sesi 3**: Modularisasi struktur folder dan pemisahan file `HomePage`.
+4. **Sesi 4**: Menambahkan `Card` UI dan `ElevatedButton` interaktif.
+5. **Sesi 5**: Menambahkan komponen Profile Card dan custom widget `InfoItem`.
+6. **Sesi 6**: Penataan dokumentasi `README.md` dan penyelesaian tugas.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+**Nama**: Fajar Islamic  
+**Mata Kuliah**: Pemrograman Mobile (Pertemuan 3)
