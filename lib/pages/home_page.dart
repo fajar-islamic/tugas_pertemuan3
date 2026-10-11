@@ -15,11 +15,10 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.indigo,
         centerTitle: true,
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Card(
                 elevation: 4,
@@ -30,33 +29,46 @@ class HomePage extends StatelessWidget {
                   padding: const EdgeInsets.all(24.0),
                   child: Column(
                     children: [
-                      const Icon(
-                        Icons.flutter_dash,
-                        size: 80,
-                        color: Colors.indigo,
+                      const CircleAvatar(
+                        radius: 40,
+                        backgroundColor: Colors.indigo,
+                        child: Icon(
+                          Icons.person,
+                          size: 50,
+                          color: Colors.white,
+                        ),
                       ),
                       const SizedBox(height: 12),
                       const Text(
-                        'Halo, Fajar!',
+                        'Fajar Islamic',
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
                           color: Colors.indigo,
                         ),
                       ),
-                      const SizedBox(height: 6),
+                      const SizedBox(height: 4),
                       Text(
-                        'Praktikum Flutter - Pertemuan 3',
+                        'Mahasiswa Teknik Informatika',
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.grey[600],
                         ),
                       ),
+                      const Divider(height: 30, thickness: 1),
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          _InfoItem(label: 'Pertemuan', value: '03'),
+                          _InfoItem(label: 'Status', value: 'Aktif'),
+                          _InfoItem(label: 'Tugas', value: 'Selesai'),
+                        ],
+                      ),
                     ],
                   ),
                 ),
               ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 20),
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.indigo,
@@ -72,18 +84,49 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      content: Text('Tombol berhasil diklik!'),
+                      content: Text('Progres Pertemuan 3 Berhasil Diperbarui!'),
                       duration: Duration(seconds: 2),
                     ),
                   );
                 },
                 icon: const Icon(Icons.touch_app),
-                label: const Text('Klik Di Sini'),
+                label: const Text('Cek Progres'),
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class _InfoItem extends StatelessWidget {
+  final String label;
+  final String value;
+
+  const _InfoItem({required this.label, required this.value});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          value,
+          style: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Colors.indigo,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 12,
+            color: Colors.grey[600],
+          ),
+        ),
+      ],
     );
   }
 }
